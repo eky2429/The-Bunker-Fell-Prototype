@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class OverseerCameraLook : MonoBehaviour
 {
-    private float rotationX;
-    private float rotationY;
-
-    private float mouseSensitivity = 5f;
+    public float rotationX;
+    public float rotationY;
+    public float mouseSensitivity = 5f;
 
     // Start is called before the first frame update
     void Start()

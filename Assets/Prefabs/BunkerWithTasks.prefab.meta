@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Prefabs/BunkerWithTasks.prefab.meta
 guid: ff1c0e342a1524f779563f1846080e6f
+========
+guid: c8ac1e544897d4717b3683cb72d84a67
+>>>>>>>> origin/new-ethan-branch:Assets/Prefabs/Task-Blue.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 
