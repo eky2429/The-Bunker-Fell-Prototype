@@ -65,11 +65,11 @@
     <Compile Include="Assets\MainMenu.cs" />
     <Compile Include="Assets\PlayerUI.cs" />
     <Compile Include="Assets\Scripts\CameraRotator.cs" />
-    <Compile Include="Assets\Scripts\CameraScript.cs" />
-    <Compile Include="Assets\Scripts\LightSwitchController.cs" />
-    <Compile Include="Assets\Scripts\OverseerCameraLook.cs" />
-    <Compile Include="Assets\Scripts\PlayerLook.cs" />
-    <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Overseer\CameraScript.cs" />
+    <Compile Include="Assets\Scripts\Overseer\LightSwitchController.cs" />
+    <Compile Include="Assets\Scripts\Overseer\OverseerCameraLook.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerLook.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Task.cs" />
     <Compile Include="Assets\Task1.cs" />
     <Compile Include="Assets\Tasks.cs" />
