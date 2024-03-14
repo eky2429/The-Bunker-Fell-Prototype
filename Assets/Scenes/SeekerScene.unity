@@ -735,7 +735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 838c6171cb12ca44fac242d05e30d653, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightOB: {fileID: 0}
+  lightOB: {fileID: 1653823623}
   lightsAreOn: 0
   timeToAutoOn: 10
 --- !u!1 &1392676843
