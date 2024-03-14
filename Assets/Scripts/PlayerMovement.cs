@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,11 +16,16 @@ public class PlayerMovement : MonoBehaviour
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
 
-    public Vector3 velocity;
-    public bool isGrounded;
+    private Vector3 velocity;
+    private bool isGrounded;
+
+    public Tasks tasks;
+    private int currenTask = -1;
+    public int taskDistanceLimit = 10;
 
     // Start is called before the first frame update
-    void Start() {}
+    void Start()
+    { }
 
     // Update is called once per frame
     void Update()
@@ -27,7 +33,8 @@ public class PlayerMovement : MonoBehaviour
 
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-        if (isGrounded && velocity.y < 0) {
+        if (isGrounded && velocity.y < 0)
+        {
             velocity.y = -2f;
         }
 
@@ -40,11 +47,34 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(move * speed * Time.deltaTime);
 
         //
-        if (Input.GetButtonDown("Jump") && isGrounded) {
+        if (Input.GetButtonDown("Jump") && isGrounded)
+        {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
 
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+
+        if (currenTask != -1)
+        {
+            if (tasks.GetDistance(GetComponent<Transform>().position, currenTask) >= taskDistanceLimit)
+            {
+                tasks.HideTask(currenTask);
+                currenTask = -1;
+            }
+        }
+    }
+
+    //Detects collision on Player
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        Task obj = hit.gameObject.GetComponent<Task>();
+        if (obj != null)
+        {
+            currenTask = obj.taskNumber;
+            //Show specific task for it
+            tasks.ShowTask(currenTask);
+
+        }
     }
 }

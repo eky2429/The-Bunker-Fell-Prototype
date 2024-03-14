@@ -18,6 +18,10 @@ public class PlayerLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Cursor.lockState = (Cursor.lockState == CursorLockMode.Locked) ? CursorLockMode.None : CursorLockMode.Locked;
+        }
         float mouseX = Input.GetAxis("Mouse X") * mouseSenstivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSenstivity * Time.deltaTime;
 

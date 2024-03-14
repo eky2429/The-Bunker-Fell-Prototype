@@ -65,6 +65,9 @@
     <Compile Include="Assets/Scripts/OverseerCameraLook.cs" />
     <Compile Include="Assets/Scripts/PlayerLook.cs" />
     <Compile Include="Assets/Scripts/PlayerMovement.cs" />
+    <Compile Include="Assets/Task.cs" />
+    <Compile Include="Assets/Task1.cs" />
+    <Compile Include="Assets/Tasks.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
