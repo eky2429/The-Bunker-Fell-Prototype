@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SeekerCameraLook : MonoBehaviour
+public class OverseerCameraLook : MonoBehaviour
 {
     private float rotationX;
     private float rotationY;
