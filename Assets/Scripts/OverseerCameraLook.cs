@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SeekerCameraLook : MonoBehaviour
+public class OverseerCameraLook : MonoBehaviour
 {
     private float rotationX;
     private float rotationY;
-    public float mouseSensitivity = 5f;
+
+    private float mouseSensitivity = 5f;
 
     // Start is called before the first frame update
     void Start()
