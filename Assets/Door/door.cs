@@ -12,7 +12,7 @@ public class door : MonoBehaviour
     public GameObject intText;
 
     //The names of the door open and door close animations
-    public string doorOpenAnimName, doorCloseAnimName;
+    public string doorOpenAnimName, doorCloseAnimName, doorIdleAnimName;
 
     //The Update() void is where stuff occurs every frame
     void Update()
@@ -43,6 +43,11 @@ public class door : MonoBehaviour
                     if (doorAnim.GetCurrentAnimatorStateInfo(0).IsName(doorCloseAnimName))
                     {
                         doorAnim.ResetTrigger("close");
+                        doorAnim.SetTrigger("idle");
+                    }
+                    if (doorAnim.GetCurrentAnimatorStateInfo(0).IsName(doorIdleAnimName))
+                    {
+                        doorAnim.ResetTrigger("idle");
                         doorAnim.SetTrigger("open");
                     }
                 }
