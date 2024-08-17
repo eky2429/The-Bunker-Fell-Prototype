@@ -69,12 +69,11 @@ public class PlayerMovement : MonoBehaviour
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         Task obj = hit.gameObject.GetComponent<Task>();
-        if (obj != null)
+        if (obj != null && !obj.getDone())
         {
             currenTask = obj.taskNumber;
             //Show specific task for it
             tasks.ShowTask(currenTask);
-
         }
     }
 }

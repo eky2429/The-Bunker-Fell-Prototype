@@ -6,6 +6,8 @@ public class Task : MonoBehaviour
 {
 
     public int taskNumber;
+    private bool isDone = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,5 +18,15 @@ public class Task : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void setFinished()
+    {
+        isDone = true;
+    }
+
+    public bool getDone()
+    {
+        return isDone;
     }
 }

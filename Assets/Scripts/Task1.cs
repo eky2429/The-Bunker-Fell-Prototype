@@ -9,7 +9,6 @@ public class Task1 : Task
     public TextMeshProUGUI heading;
     public TMP_InputField userInput;
     public PlayerUI tasksCounter;
-    public bool taskDone = false;
 
     private string headingText = "Enter PIN: ";
     private int randomPin;
@@ -34,7 +33,7 @@ public class Task1 : Task
         {
             //If valid, increment tasks
             tasksCounter.UpdateTasks();
-            taskDone = true;
+            setFinished();
             self.SetActive(false);
         }
     }
